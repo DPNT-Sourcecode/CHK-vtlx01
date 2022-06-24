@@ -27,7 +27,11 @@ def checkout(skus):
         elif k == 'D':
             val += v*15
         else:
-            val += (v-b)//2*45 + (v-b)%2*30
+            if v-b>2:
+                val += (v-b)//2*45 + (v-b)%2*30
+            else:
+                val += (v-b)*30
     return val
     
         
+

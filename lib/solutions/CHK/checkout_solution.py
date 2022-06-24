@@ -13,7 +13,7 @@ def checkout(skus):
             dic[i] += 1
     val = 0
     b = 0
-    n = 0
+    m = 0
     for k, v in sorted(dic.items(), reverse=True):
         if k == 'A':
             val += v//5 * 200
@@ -31,12 +31,18 @@ def checkout(skus):
             val += v*60
         elif k == 'C' or 'G':
             val += v*20
-        elif k == 'D' or 'M':
+        elif k == 'D':
             val += v*15
+        elif k == 'N':
+            val += v*40
         elif k == 'L':
             val += v*90
+        elif k == 'O:
+            val += v*10
         elif k == 'B':
             val += (v-b)//2*45 + (v-b)%2*30
+        elif k == 'M':
+             val += (v-m)*15
         elif k == 'F':
             val += v//3*20 + v%3 * 10
         elif k == 'K':
@@ -46,6 +52,7 @@ def checkout(skus):
     return val
     
         
+
 
 
 

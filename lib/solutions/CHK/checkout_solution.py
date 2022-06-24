@@ -21,7 +21,7 @@ def checkout(skus):
             val += v//3 * 130 + v%3 * 50
         elif k == 'E':
             val += v*40
-            b = val//2
+            b = v//2
         elif k == 'C':
             val += v*20
         elif k == 'D':
@@ -31,10 +31,3 @@ def checkout(skus):
     return val
     
         
-
-
-
-
-
-
-

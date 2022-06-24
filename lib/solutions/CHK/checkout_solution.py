@@ -3,10 +3,10 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    lst2 = ['A', 'B', 'C', 'D', 'E']
+    lst3 = ['A', 'B', 'C', 'D', 'E', 'F']
     dic = {}
     for i in skus:
-        if i not in lst2:
+        if i not in lst3:
             return -1
         if i not in dic:
             dic[i] = 1
@@ -28,9 +28,12 @@ def checkout(skus):
             val += v*15
         elif k == 'B':
             val += (v-b)//2*45 + (v-b)%2*30
+        else:
+            val += v//3*20 + v%3 * 10
     return val
     
         
+
 
 
 

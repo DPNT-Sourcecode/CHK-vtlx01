@@ -3,10 +3,9 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    lst3 = ['A', 'B', 'C', 'D', 'E', 'F']
     dic = {}
     for i in skus:
-        if i not in lst3:
+        if isupper(i):
             return -1
         if i not in dic:
             dic[i] = 1
@@ -33,3 +32,4 @@ def checkout(skus):
     return val
     
         
+

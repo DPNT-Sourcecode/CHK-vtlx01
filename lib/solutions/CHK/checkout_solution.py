@@ -55,6 +55,8 @@ def checkout(skus):
             val += v*10
         elif k == 'X':
             val += v*90
+        elif k == 'O':
+            val += v*10
         elif k == 'B':
             val += (v-b)//2*45 + (v-b)%2*30
         elif k == 'Q':
@@ -67,10 +69,12 @@ def checkout(skus):
             val += v//2*150 + v%2*80
         elif k == 'P':
             val += v//5*200 +v%5*50
-
+        elif k == 'U':
+            val += v//4*120+v%4*40
         
     return val
     
         
+
 
 

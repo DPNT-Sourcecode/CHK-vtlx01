@@ -20,6 +20,10 @@ def checkout(skus):
             val += v//5 * 200
             v = v%5
             val += v//3 * 130 + v%3 * 50
+        elif k== 'V':
+            val += v//3* 130
+            v = v%3
+            val += v//2* 90+ v%2* 50
         elif k == 'H':
             val += v//10 * 80
             v = v%10
@@ -30,8 +34,8 @@ def checkout(skus):
             val += v*35
         elif k == 'J':
             val += v*60
-        elif k == 'C' or 'G' or 'T':
-            val += v*20
+        elif k == 'C' or 'T' or 'W':
+           val += v*20
         elif k == 'D':
             val += v*15
         elif k == 'N':
@@ -44,6 +48,10 @@ def checkout(skus):
             val += v*50
         elif k == 'S':
             val += v*30
+        elif k == 'Y':
+            val += v*10
+        elif k == 'X':
+            val += v*90
         elif k == 'B':
             val += (v-b)//2*45 + (v-b)%2*30
         elif k == 'M':
@@ -62,6 +70,7 @@ def checkout(skus):
     return val
     
         
+
 
 
 

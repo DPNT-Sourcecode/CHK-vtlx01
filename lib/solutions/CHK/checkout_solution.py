@@ -16,6 +16,8 @@ def checkout(skus):
     b = 0
     for k, v in dic.items():
         if k == 'A':
+            val += v//5 * 150
+            v = v%5
             val += v//3 * 130 + v%3 * 50
         elif k == 'E':
             val += v*40
@@ -29,6 +31,7 @@ def checkout(skus):
     return val
     
         
+
 
 
 

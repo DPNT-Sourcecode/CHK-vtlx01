@@ -75,6 +75,3 @@ def checkout(skus):
     return val
     
         
-
-
-

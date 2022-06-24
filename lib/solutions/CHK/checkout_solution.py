@@ -13,16 +13,21 @@ def checkout(skus):
         else:
             dic[i] += 1
     val = 0
+    b = 0
     for k, v in dic.items():
         if k == 'A':
             val += v//3 * 130 + v%3 * 50
-        elif k == 'B':
-            val += v//2 * 45 + v%2 * 30
+        elif k == 'E':
+            val += v*40
+            b = val//2
         elif k == 'C':
             val += v*20
-        else:
+        elif k == 'D':
             val += v*15
+        else:
+            val += (v-b)*40 - (v-b)//2*30
     return val
     
         
+
 

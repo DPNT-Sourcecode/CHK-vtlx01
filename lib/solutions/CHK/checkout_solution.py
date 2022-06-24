@@ -14,7 +14,7 @@ def checkout(skus):
             dic[i] += 1
     val = 0
     b = 0
-    for k, v in dic.items():
+    for k, v in sorted(dic.items(), reverse=True):
         if k == 'A':
             val += v//5 * 200
             v = v%5
@@ -31,5 +31,6 @@ def checkout(skus):
     return val
     
         
+
 
 

@@ -41,7 +41,7 @@ def checkout(skus):
             val += v*15
         elif k == 'N':
             val += v*40
-            m = n//3
+            m = v//3
         elif k == 'L':
             val += v*90
         elif k == 'R':
@@ -74,3 +74,4 @@ def checkout(skus):
     return val
     
         
+

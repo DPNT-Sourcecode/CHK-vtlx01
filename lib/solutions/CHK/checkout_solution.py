@@ -81,7 +81,20 @@ def checkout(skus):
             pack[3] = v
         elif k == 'T':
             pack[2] = v
+        pack_sum = sum(pack)
+        val += pack_sum//3*45
+        while pack_sum:
+            for i in range(len(pack)):
+                if pack[i]-pack_sum>0:
+                    pack[i] =pack[i]-pack_sum
+                    pack_sum = 0
+                    break
+                else:
+                    pack[i] = 0
+                    pack_sum -= pack[i]
+        val += pack*price
     return val
     
         
+
 

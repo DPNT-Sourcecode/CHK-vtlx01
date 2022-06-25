@@ -83,20 +83,21 @@ def checkout(skus):
             pack[2] = v
         pack_sum = sum(pack)
         val += pack_sum//3*45
-        discount = pack_sum//3*3
+        pack_sum = pack_sum//3*3
         for i in range(len(pack)):
-            while pack_sum:
-                if pack[i]-pack_sum>0:
-                    pack[i] =pack[i]-pack_sum
-                    pack_sum = 0
-                    break
-                else:
-                    pack[i] = 0
-                    pack_sum -= pack[i]
+            if pack[i] < pack_sum:
+                pack[i] = 0
+                pack_sum -= pack[i]
+            else:
+                pack[i] -= pack_sum
+                pack_sum = 0
+                break
+                    
         import numpy as np
         val += int(sum(np.array(pack)*np.array(price)))
     return val
     
         
+
 
 

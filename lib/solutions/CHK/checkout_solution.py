@@ -15,6 +15,8 @@ def checkout(skus):
     b = 0
     m = 0
     q = 0
+    pack = [0, 0, 0, 0, 0]
+    price = [21, 20, 20, 20, 17]
     for k, v in sorted(dic.items(), reverse=True):
         if k == 'A':
             val += v//5 * 200
@@ -35,7 +37,7 @@ def checkout(skus):
             val += v*35
         elif k == 'J':
             val += v*60
-        elif k == 'C' or  k == 'G' or  k == 'T' or  k == 'W':
+        elif k == 'C' or  k == 'G' or  k == 'W':
            val += v*20
         elif k == 'D':
             val += v*15
@@ -49,8 +51,6 @@ def checkout(skus):
             q = v//3
         elif k == 'J' or  k == 'Z':
             val += v*50
-        elif k == 'S':
-            val += v*30
         elif k == 'Y':
             val += v*10
         elif k == 'X':
@@ -71,7 +71,17 @@ def checkout(skus):
             val += v//5*200 +v%5*50
         elif k == 'U':
             val += v//4*120+v%4*40
-        
+        elif k == 'Z':
+            pack[0] = v
+        elif k == 'Y':
+            pack[1] = v
+        elif k == 'X':
+            pack[4] = v
+        elif k == 'S':
+            pack[3] = v
+        elif k == 'T':
+            pack[2] = v
     return val
     
         
+

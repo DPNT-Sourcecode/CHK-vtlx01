@@ -93,8 +93,9 @@ def checkout(skus):
                     pack[i] = 0
                     pack_sum -= pack[i]
         import numpy as np
-        val += np.array(pack)*np.array(price)
+        val += sum(np.array(pack)*np.array(price))
     return val
     
         
+
 

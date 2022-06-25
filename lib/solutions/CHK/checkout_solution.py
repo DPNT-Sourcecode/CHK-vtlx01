@@ -62,7 +62,7 @@ def checkout(skus):
         elif k == 'F':
             val += v//3*20 + v%3 * 10
         elif k == 'K':
-            val += v//2*150 + v%2*80
+            val += v//2*120 + v%2*70
         elif k == 'P':
             val += v//5*200 +v%5*50
         elif k == 'U':
@@ -94,6 +94,7 @@ def checkout(skus):
     return val
     
         
+
 
 
 

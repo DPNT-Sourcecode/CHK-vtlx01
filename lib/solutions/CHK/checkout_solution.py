@@ -49,8 +49,6 @@ def checkout(skus):
         elif k == 'R':
             val += v*50
             q = v//3
-        elif k == 'J':
-            val += v*50
         elif k == 'O':
             val += v*10
         elif k == 'B':
@@ -77,21 +75,22 @@ def checkout(skus):
             pack[3] = v
         elif k == 'T':
             pack[2] = v
-        pack_sum = sum(pack)
-        val += pack_sum//3*45
-        pack_sum = pack_sum//3*3
-        for i in range(len(pack)):
-            if pack[i] < pack_sum:
-                pack_sum -= pack[i]
-                pack[i] = 0
-            else:
-                pack[i] -= pack_sum
-                pack_sum = 0
-                break
+    pack_sum = sum(pack)
+    val += pack_sum//3*45
+    pack_sum = pack_sum//3*3
+    for i in range(len(pack)):
+        if pack[i] < pack_sum:
+            pack_sum -= pack[i]
+            pack[i] = 0
+        else:
+            pack[i] -= pack_sum
+            pack_sum = 0
+            break
                     
-        import numpy as np
-        val += int(sum(np.array(pack)*np.array(price)))
+    import numpy as np
+    val += int(sum(np.array(pack)*np.array(price)))
     return val
     
         
+
 

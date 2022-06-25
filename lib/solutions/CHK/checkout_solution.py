@@ -82,8 +82,8 @@ def checkout(skus):
         pack_sum = pack_sum//3*3
         for i in range(len(pack)):
             if pack[i] < pack_sum:
-                pack[i] = 0
                 pack_sum -= pack[i]
+                pack[i] = 0
             else:
                 pack[i] -= pack_sum
                 pack_sum = 0
@@ -94,3 +94,4 @@ def checkout(skus):
     return val
     
         
+

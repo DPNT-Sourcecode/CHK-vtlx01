@@ -83,7 +83,7 @@ def checkout(skus):
             pack[2] = v
         pack_sum = sum(pack)
         val += pack_sum//3*45
-
+        discount = pack_sum//3*3
         for i in range(len(pack)):
             while pack_sum:
                 if pack[i]-pack_sum>0:
@@ -98,4 +98,5 @@ def checkout(skus):
     return val
     
         
+
 
